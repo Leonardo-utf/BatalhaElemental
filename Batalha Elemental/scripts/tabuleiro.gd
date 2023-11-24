@@ -3,12 +3,6 @@ extends Node2D
 @onready var mao = $Mao
 @onready var tempo = 5000
 
-var conteudo = {
-	"fogo1": ["fogo",1],
-	"fogo2": ["fogo",2],
-	"fogo3": ["fogo",3]	
-}
-
 
 
 #var cartas = [conteudo[0], conteudo[1]] 
@@ -24,9 +18,7 @@ func _process(delta):
 	#tempo = tempo-delta
 	pass
 	
-func _combate(carta1,carta2):
-	
-	
+func _combate(carta1,carta2):	
 	
 	carta1.global_position = Vector2(500,320)
 	carta2.global_position = Vector2(620,320)

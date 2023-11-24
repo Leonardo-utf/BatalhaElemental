@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://w6dgl8d25dxv"]
+[gd_scene load_steps=23 format=3 uid="uid://w6dgl8d25dxv"]
 
 [ext_resource type="Texture2D" uid="uid://bgrirm14ocmni" path="res://assets/cartas/Fogo1.png" id="1_tojnj"]
 [ext_resource type="Script" path="res://scripts/cartas.gd" id="1_vp8px"]
@@ -15,14 +15,19 @@
 [ext_resource type="Texture2D" uid="uid://d0ndin6b8leiy" path="res://assets/cartas/Folha2.png" id="13_j2arl"]
 [ext_resource type="Script" path="res://scripts/Folha2.gd" id="13_qfcah"]
 [ext_resource type="Script" path="res://scripts/Pedra1.gd" id="15_pk3yn"]
+[ext_resource type="Texture2D" uid="uid://bfbhw8sddgpm7" path="res://assets/cartas/Pedra1.png" id="15_pqd7e"]
 [ext_resource type="Script" path="res://scripts/Pedra2.gd" id="16_y8qut"]
+[ext_resource type="Texture2D" uid="uid://ctxxdho3vkjc3" path="res://assets/cartas/Pedra2.png" id="17_f1rle"]
 [ext_resource type="Script" path="res://scripts/Eletricidade1.gd" id="17_tm6ct"]
-[ext_resource type="Script" path="res://scripts/Eletrecidade2.gd" id="18_ilqw4"]
+[ext_resource type="Script" path="res://scripts/Eletricidade2.gd" id="18_7crdl"]
+[ext_resource type="Texture2D" uid="uid://xyv5eachmuke" path="res://assets/cartas/Eletricidade1.png" id="19_ynl2s"]
+[ext_resource type="Texture2D" uid="uid://bmx8poa7j268u" path="res://assets/cartas/Eletricidade2.png" id="21_x8j3r"]
 
 [node name="Cartas" type="Node2D"]
 script = ExtResource("1_vp8px")
 
 [node name="Baixo" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0.25, 0.5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_bt66q")
@@ -38,37 +43,41 @@ texture = ExtResource("9_6hnf6")
 script = ExtResource("9_ishnt")
 
 [node name="Agua1" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_22hvj")
 script = ExtResource("6_c6eci")
 
 [node name="Agua2" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_w8qoc")
 script = ExtResource("8_5n4mi")
 
 [node name="Folha1" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("11_pcpr6")
 script = ExtResource("11_53bly")
 
 [node name="Folha2" type="Sprite2D" parent="."]
-visible = false
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_j2arl")
 script = ExtResource("13_qfcah")
 
 [node name="Pedra1" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_pqd7e")
 script = ExtResource("15_pk3yn")
 
 [node name="Pedra2" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("17_f1rle")
 script = ExtResource("16_y8qut")
 
 [node name="Eletricidade1" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("19_ynl2s")
 script = ExtResource("17_tm6ct")
 
-[node name="Eletrecidade2" type="Sprite2D" parent="."]
-script = ExtResource("18_ilqw4")
+[node name="Eletricidade2" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("21_x8j3r")
+script = ExtResource("18_7crdl")

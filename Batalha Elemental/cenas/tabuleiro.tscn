@@ -8,8 +8,8 @@
 script = ExtResource("1_yvs5g")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, 320)
-scale = Vector2(0.2466, 0.212721)
+position = Vector2(614, 337)
+scale = Vector2(0.2629, 0.225472)
 texture = ExtResource("1_mslg7")
 
 [node name="Mao" type="Node2D" parent="."]
