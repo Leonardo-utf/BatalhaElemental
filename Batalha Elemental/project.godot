@@ -11,6 +11,15 @@ config_version=5
 [application]
 
 config/name="Batalha Elemental"
-run/main_scene="res://cenas/tabuleiro.tscn"
+run/main_scene="res://cenas/menu_principal.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PontosP1="*res://scripts/pontos_p_1.gd"
+PontosP2="*res://scripts/pontos_p_2.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"

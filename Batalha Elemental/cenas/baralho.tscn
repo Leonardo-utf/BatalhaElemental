@@ -1,0 +1,567 @@
+[gd_scene load_steps=33 format=3 uid="uid://xskxqmpcdnrw"]
+
+[ext_resource type="Texture2D" uid="uid://chfxayv4scsup" path="res://assets/texturas/Madeira.jpg" id="1_b4a2r"]
+[ext_resource type="Script" path="res://scripts/baralho.gd" id="1_cvru0"]
+[ext_resource type="Texture2D" uid="uid://134236x8omif" path="res://assets/cartas/caixa.png" id="2_dy4kk"]
+[ext_resource type="PackedScene" uid="uid://w6dgl8d25dxv" path="res://cenas/cartas.tscn" id="3_afgaf"]
+[ext_resource type="Script" path="res://scripts/Preencher.gd" id="3_brv7u"]
+[ext_resource type="Texture2D" uid="uid://vef48cx7fb82" path="res://assets/cartas/setabempequena.png" id="5_1mhc1"]
+[ext_resource type="Texture2D" uid="uid://bgrirm14ocmni" path="res://assets/cartas/Fogo1.png" id="6_aug2n"]
+[ext_resource type="Texture2D" uid="uid://b236scobvmly0" path="res://assets/cartas/Agua1.png" id="6_mkp2s"]
+[ext_resource type="FontFile" uid="uid://3rw4f3epy7xx" path="res://assets/fontes/Helv Children.otf" id="7_6av7j"]
+[ext_resource type="Texture2D" uid="uid://dipkuoi6ysabp" path="res://assets/cartas/Fogo2.png" id="7_vtk37"]
+[ext_resource type="Texture2D" uid="uid://4h1rl4tbh2bh" path="res://assets/cartas/Fogo3.png" id="8_j58k8"]
+[ext_resource type="Texture2D" uid="uid://bfxp6p26c5pwx" path="res://assets/cartas/Fogo4.png" id="9_m1tcg"]
+[ext_resource type="Texture2D" uid="uid://c7vwm0dgwwnk4" path="res://assets/cartas/Fogo5.png" id="10_hceyn"]
+[ext_resource type="Texture2D" uid="uid://ej5syi6t4cno" path="res://assets/cartas/Agua2.png" id="12_1ki6r"]
+[ext_resource type="Texture2D" uid="uid://bdlqjquugn37e" path="res://assets/cartas/Agua3.png" id="13_s6v4o"]
+[ext_resource type="Texture2D" uid="uid://d2isgtwtaqkiv" path="res://assets/cartas/Agua4.png" id="14_lrhn2"]
+[ext_resource type="Texture2D" uid="uid://cr7q32r0dl2uy" path="res://assets/cartas/Agua5.png" id="15_ucqpq"]
+[ext_resource type="Texture2D" uid="uid://d0ndin6b8leiy" path="res://assets/cartas/Folha2.png" id="16_bkejk"]
+[ext_resource type="Texture2D" uid="uid://digeb23xlios3" path="res://assets/cartas/Folha3.png" id="17_qsjkk"]
+[ext_resource type="Texture2D" uid="uid://sijcss8w5ygv" path="res://assets/cartas/Folha4.png" id="18_q0egu"]
+[ext_resource type="Texture2D" uid="uid://bl5v1h6mr1d7y" path="res://assets/cartas/Folha5.png" id="19_hi0g3"]
+[ext_resource type="Texture2D" uid="uid://ctxxdho3vkjc3" path="res://assets/cartas/Pedra2.png" id="20_3i6if"]
+[ext_resource type="Texture2D" uid="uid://den8ypey4recf" path="res://assets/cartas/Pedra3.png" id="21_8a5xs"]
+[ext_resource type="Texture2D" uid="uid://cg20dsdsyb3br" path="res://assets/cartas/Pedra4.png" id="22_ac74x"]
+[ext_resource type="Texture2D" uid="uid://cq0kdk8c60j20" path="res://assets/cartas/Pedra5.png" id="23_ennll"]
+[ext_resource type="Texture2D" uid="uid://bmx8poa7j268u" path="res://assets/cartas/Eletricidade2.png" id="24_q5yp3"]
+[ext_resource type="Texture2D" uid="uid://d36bjry2hy178" path="res://assets/cartas/Eletricidade3.png" id="25_ub1gh"]
+[ext_resource type="Texture2D" uid="uid://de5p6x6jj7y60" path="res://assets/cartas/Eletricidade4.png" id="26_ba66n"]
+[ext_resource type="Texture2D" uid="uid://dno82htjxxl4j" path="res://assets/cartas/Eletricidade5.png" id="27_2ijmq"]
+[ext_resource type="Texture2D" uid="uid://cm3vakorembgs" path="res://assets/cartas/Folha1.png" id="28_4ylb4"]
+[ext_resource type="Texture2D" uid="uid://bfbhw8sddgpm7" path="res://assets/cartas/Pedra1.png" id="29_fgat1"]
+[ext_resource type="Texture2D" uid="uid://xyv5eachmuke" path="res://assets/cartas/Eletricidade1.png" id="30_ttlf3"]
+
+[node name="Baralho" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cvru0")
+
+[node name="madeira" type="Sprite2D" parent="."]
+position = Vector2(614, 337)
+scale = Vector2(0.2629, 0.225472)
+texture = ExtResource("1_b4a2r")
+
+[node name="Caixa" type="Sprite2D" parent="."]
+position = Vector2(998, 323.2)
+scale = Vector2(0.561468, 0.772792)
+texture = ExtResource("2_dy4kk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 843.0
+offset_bottom = 645.0
+pivot_offset = Vector2(689, 256)
+
+[node name="Preencher" type="Control" parent="HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+script = ExtResource("3_brv7u")
+
+[node name="Cartas" parent="HBoxContainer/Preencher" instance=ExtResource("3_afgaf")]
+position = Vector2(-255, -89)
+
+[node name="bfg1" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 393.0
+offset_bottom = 436.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_aug2n")
+stretch_mode = 0
+
+[node name="bfg2" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 40.0
+offset_right = 513.0
+offset_bottom = 436.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("7_vtk37")
+stretch_mode = 0
+
+[node name="bfg3" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 40.0
+offset_right = 633.0
+offset_bottom = 436.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("8_j58k8")
+stretch_mode = 0
+
+[node name="bfg4" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 40.0
+offset_right = 756.0
+offset_bottom = 436.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("9_m1tcg")
+stretch_mode = 0
+
+[node name="bfg5" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 40.0
+offset_right = 873.0
+offset_bottom = 436.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_hceyn")
+stretch_mode = 0
+
+[node name="bag1" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 168.0
+offset_right = 393.0
+offset_bottom = 564.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_mkp2s")
+stretch_mode = 0
+
+[node name="bag2" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 168.0
+offset_right = 513.0
+offset_bottom = 564.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("12_1ki6r")
+stretch_mode = 0
+
+[node name="bag3" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 168.0
+offset_right = 633.0
+offset_bottom = 564.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("13_s6v4o")
+stretch_mode = 0
+
+[node name="bag4" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 168.0
+offset_right = 756.0
+offset_bottom = 564.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("14_lrhn2")
+stretch_mode = 0
+
+[node name="bag5" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 168.0
+offset_right = 873.0
+offset_bottom = 564.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("15_ucqpq")
+stretch_mode = 0
+
+[node name="bfl1" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 290.0
+offset_right = 393.0
+offset_bottom = 686.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("28_4ylb4")
+stretch_mode = 0
+
+[node name="bfl2" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 288.0
+offset_right = 513.0
+offset_bottom = 684.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("16_bkejk")
+stretch_mode = 0
+
+[node name="bfl3" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 288.0
+offset_right = 633.0
+offset_bottom = 684.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("17_qsjkk")
+stretch_mode = 0
+
+[node name="bfl4" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 290.0
+offset_right = 756.0
+offset_bottom = 686.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("18_q0egu")
+stretch_mode = 0
+
+[node name="bfl5" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 292.0
+offset_right = 873.0
+offset_bottom = 688.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("19_hi0g3")
+stretch_mode = 0
+
+[node name="bpd1" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 416.0
+offset_right = 393.0
+offset_bottom = 812.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("29_fgat1")
+stretch_mode = 0
+
+[node name="bpd2" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 416.0
+offset_right = 513.0
+offset_bottom = 812.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("20_3i6if")
+stretch_mode = 0
+
+[node name="bpd3" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 416.0
+offset_right = 633.0
+offset_bottom = 812.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("21_8a5xs")
+stretch_mode = 0
+
+[node name="bpd4" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 416.0
+offset_right = 756.0
+offset_bottom = 812.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("22_ac74x")
+stretch_mode = 0
+
+[node name="bpd5" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 416.0
+offset_right = 873.0
+offset_bottom = 812.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("23_ennll")
+stretch_mode = 0
+
+[node name="bel1" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 536.0
+offset_right = 393.0
+offset_bottom = 932.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("30_ttlf3")
+stretch_mode = 0
+
+[node name="bel2" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 536.0
+offset_right = 513.0
+offset_bottom = 932.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("24_q5yp3")
+stretch_mode = 0
+
+[node name="bel3" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 536.0
+offset_right = 633.0
+offset_bottom = 932.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("25_ub1gh")
+stretch_mode = 0
+
+[node name="bel4" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 536.0
+offset_right = 756.0
+offset_bottom = 932.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("26_ba66n")
+stretch_mode = 0
+
+[node name="bel5" type="TextureButton" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 536.0
+offset_right = 873.0
+offset_bottom = 932.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("27_2ijmq")
+stretch_mode = 0
+
+[node name="Bt_sair" type="Button" parent="HBoxContainer/Preencher"]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 29.0
+size_flags_horizontal = 6
+icon = ExtResource("5_1mhc1")
+flat = true
+alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -282.0
+offset_top = 30.0
+offset_right = -27.0
+offset_bottom = 610.0
+grow_horizontal = 0
+pivot_offset = Vector2(-340, 231)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label8" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label9" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label10" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label11" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label12" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label13" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label14" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Label15" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="Bt_sair" type="Button" parent="."]
+layout_mode = 1
+offset_right = 42.0
+offset_bottom = 29.0
+size_flags_horizontal = 6
+icon = ExtResource("5_1mhc1")
+flat = true
+alignment = 0
+
+[node name="Bt_salvar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1019.0
+offset_top = 609.0
+offset_right = 1127.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 25
+text = "SALVAR"
+flat = true
+
+[node name="Bt_limpar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 610.0
+offset_right = 980.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 25
+text = "LIMPAR"
+flat = true
+
+[node name="Aviso" type="Label" parent="."]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 56.0
+offset_right = 842.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 18
+text = "Escolha 15 cartas
+Para o seu Baralho!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Salvo" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 624.0
+offset_top = 560.0
+offset_right = 842.0
+offset_bottom = 613.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_6av7j")
+theme_override_font_sizes/font_size = 49
+text = "SALVO!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Preencher/bfg1" to="HBoxContainer/Preencher" method="_on_bfg_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfg2" to="HBoxContainer/Preencher" method="_on_bfg_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfg3" to="HBoxContainer/Preencher" method="_on_bfg_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfg4" to="HBoxContainer/Preencher" method="_on_bfg_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfg5" to="HBoxContainer/Preencher" method="_on_bfg_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bag1" to="HBoxContainer/Preencher" method="_on_bag_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bag2" to="HBoxContainer/Preencher" method="_on_bag_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bag3" to="HBoxContainer/Preencher" method="_on_bag_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bag4" to="HBoxContainer/Preencher" method="_on_bag_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bag5" to="HBoxContainer/Preencher" method="_on_bag_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfl1" to="HBoxContainer/Preencher" method="_on_bfl_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfl2" to="HBoxContainer/Preencher" method="_on_bfl_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfl3" to="HBoxContainer/Preencher" method="_on_bfl_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfl4" to="HBoxContainer/Preencher" method="_on_bfl_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bfl5" to="HBoxContainer/Preencher" method="_on_bfl_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bpd1" to="HBoxContainer/Preencher" method="_on_bpd_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bpd2" to="HBoxContainer/Preencher" method="_on_bpd_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bpd3" to="HBoxContainer/Preencher" method="_on_bpd_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bpd4" to="HBoxContainer/Preencher" method="_on_bpd_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bpd5" to="HBoxContainer/Preencher" method="_on_bpd_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bel1" to="HBoxContainer/Preencher" method="_on_bel_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bel2" to="HBoxContainer/Preencher" method="_on_bel_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bel3" to="HBoxContainer/Preencher" method="_on_bel_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bel4" to="HBoxContainer/Preencher" method="_on_bel_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/bel5" to="HBoxContainer/Preencher" method="_on_bel_5_pressed"]
+[connection signal="pressed" from="HBoxContainer/Preencher/Bt_sair" to="HBoxContainer/Preencher" method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Bt_sair" to="." method="_on_bt_sair_pressed"]
+[connection signal="pressed" from="Bt_salvar" to="HBoxContainer/Preencher" method="_on_bt_salvar_pressed"]
+[connection signal="pressed" from="Bt_limpar" to="HBoxContainer/Preencher" method="_on_bt_limpar_pressed"]

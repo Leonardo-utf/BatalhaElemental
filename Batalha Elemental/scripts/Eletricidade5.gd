@@ -1,4 +1,4 @@
 extends Sprite2D
 
 var tipo = "eletricidade"
-var valor = 2
+var valor = 5

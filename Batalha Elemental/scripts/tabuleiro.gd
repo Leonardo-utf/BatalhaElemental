@@ -2,17 +2,15 @@ extends Node2D
 
 @onready var mao = $Mao
 @onready var tempo = 5000
+@onready var pontosp1 = preload("res://scripts/pontos_p_1.gd")
+@onready var pontosp2 = preload("res://scripts/pontos_p_2.gd")
 
 
 
 #var cartas = [conteudo[0], conteudo[1]] 
 
-func _ready():
-	print("Valor da carta: ",mao.lista[0].tipo)
-	#var fundo1 = mao.fundo
-	#var fundo2 = mao.fundo
-	#fundo1.global_position = Vector2(-100,-100)
-	#fundo2.global_position = Vector2(-100,-100)
+
+
 	
 func _process(delta):
 	#tempo = tempo-delta
@@ -24,11 +22,7 @@ func _combate(carta1,carta2):
 	carta2.global_position = Vector2(620,320)
 	print("Combate entre ", carta1.tipo, carta1.valor, " e ", carta2.tipo, carta2.valor)
 	
-	#tempo = 500
-	#if tempo>10:
-#		get_tree().paused = true
-		#if Input.is_key_pressed(KEY_SPACE):
-		#	get_tree().paused = false
+
 		
 	var aux = 0
 	aux = _checa_vantagem(carta1.tipo, carta2.tipo)
@@ -88,4 +82,5 @@ func _checa_vantagem(carta1,carta2):
 func _input(event):
 	if Input.is_key_pressed(KEY_SPACE):
 		_combate(mao.lista[2],mao.lista[5])
+		print("GLOBAL NO TABULEIRO", pontosp2)
 		#print(mao.lista[0].tipo)

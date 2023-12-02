@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://w6dgl8d25dxv"]
+[gd_scene load_steps=53 format=3 uid="uid://w6dgl8d25dxv"]
 
 [ext_resource type="Texture2D" uid="uid://bgrirm14ocmni" path="res://assets/cartas/Fogo1.png" id="1_tojnj"]
 [ext_resource type="Script" path="res://scripts/cartas.gd" id="1_vp8px"]
@@ -6,28 +6,57 @@
 [ext_resource type="Script" path="res://scripts/Fogo1.gd" id="3_k4f7i"]
 [ext_resource type="Texture2D" uid="uid://b236scobvmly0" path="res://assets/cartas/Agua1.png" id="5_22hvj"]
 [ext_resource type="Script" path="res://scripts/Agua1.gd" id="6_c6eci"]
+[ext_resource type="Texture2D" uid="uid://4h1rl4tbh2bh" path="res://assets/cartas/Fogo3.png" id="7_ns882"]
 [ext_resource type="Texture2D" uid="uid://ej5syi6t4cno" path="res://assets/cartas/Agua2.png" id="7_w8qoc"]
+[ext_resource type="Script" path="res://scripts/Fogo3.gd" id="8_1wkii"]
 [ext_resource type="Script" path="res://scripts/Agua2.gd" id="8_5n4mi"]
+[ext_resource type="Texture2D" uid="uid://bfxp6p26c5pwx" path="res://assets/cartas/Fogo4.png" id="8_40rki"]
 [ext_resource type="Texture2D" uid="uid://dipkuoi6ysabp" path="res://assets/cartas/Fogo2.png" id="9_6hnf6"]
 [ext_resource type="Script" path="res://scripts/Fogo2.gd" id="9_ishnt"]
+[ext_resource type="Texture2D" uid="uid://c7vwm0dgwwnk4" path="res://assets/cartas/Fogo5.png" id="9_od18p"]
+[ext_resource type="Script" path="res://scripts/Fogo4.gd" id="10_5qwxo"]
 [ext_resource type="Script" path="res://scripts/Folha1.gd" id="11_53bly"]
 [ext_resource type="Texture2D" uid="uid://cm3vakorembgs" path="res://assets/cartas/Folha1.png" id="11_pcpr6"]
+[ext_resource type="Script" path="res://scripts/Fogo5.gd" id="12_hyitl"]
 [ext_resource type="Texture2D" uid="uid://d0ndin6b8leiy" path="res://assets/cartas/Folha2.png" id="13_j2arl"]
 [ext_resource type="Script" path="res://scripts/Folha2.gd" id="13_qfcah"]
+[ext_resource type="Texture2D" uid="uid://bdlqjquugn37e" path="res://assets/cartas/Agua3.png" id="14_nwel6"]
+[ext_resource type="Texture2D" uid="uid://d2isgtwtaqkiv" path="res://assets/cartas/Agua4.png" id="15_48f3t"]
 [ext_resource type="Script" path="res://scripts/Pedra1.gd" id="15_pk3yn"]
 [ext_resource type="Texture2D" uid="uid://bfbhw8sddgpm7" path="res://assets/cartas/Pedra1.png" id="15_pqd7e"]
+[ext_resource type="Texture2D" uid="uid://cr7q32r0dl2uy" path="res://assets/cartas/Agua5.png" id="16_mh8hr"]
 [ext_resource type="Script" path="res://scripts/Pedra2.gd" id="16_y8qut"]
 [ext_resource type="Texture2D" uid="uid://ctxxdho3vkjc3" path="res://assets/cartas/Pedra2.png" id="17_f1rle"]
 [ext_resource type="Script" path="res://scripts/Eletricidade1.gd" id="17_tm6ct"]
 [ext_resource type="Script" path="res://scripts/Eletricidade2.gd" id="18_7crdl"]
+[ext_resource type="Script" path="res://scripts/Agua3.gd" id="18_dnsvu"]
 [ext_resource type="Texture2D" uid="uid://xyv5eachmuke" path="res://assets/cartas/Eletricidade1.png" id="19_ynl2s"]
+[ext_resource type="Script" path="res://scripts/Agua4.gd" id="20_7cvmn"]
+[ext_resource type="Texture2D" uid="uid://digeb23xlios3" path="res://assets/cartas/Folha3.png" id="21_c2nx7"]
 [ext_resource type="Texture2D" uid="uid://bmx8poa7j268u" path="res://assets/cartas/Eletricidade2.png" id="21_x8j3r"]
+[ext_resource type="Script" path="res://scripts/Agua5.gd" id="22_gp01y"]
+[ext_resource type="Texture2D" uid="uid://sijcss8w5ygv" path="res://assets/cartas/Folha4.png" id="22_m4yhl"]
+[ext_resource type="Texture2D" uid="uid://bl5v1h6mr1d7y" path="res://assets/cartas/Folha5.png" id="23_i3g6o"]
+[ext_resource type="Script" path="res://scripts/Folha3.gd" id="28_8uciw"]
+[ext_resource type="Texture2D" uid="uid://den8ypey4recf" path="res://assets/cartas/Pedra3.png" id="28_apo1i"]
+[ext_resource type="Texture2D" uid="uid://cg20dsdsyb3br" path="res://assets/cartas/Pedra4.png" id="29_vdd7s"]
+[ext_resource type="Script" path="res://scripts/Folha4.gd" id="30_em5pe"]
+[ext_resource type="Texture2D" uid="uid://cq0kdk8c60j20" path="res://assets/cartas/Pedra5.png" id="30_lhxuf"]
+[ext_resource type="Script" path="res://scripts/Folha5.gd" id="32_a1k3w"]
+[ext_resource type="Texture2D" uid="uid://d36bjry2hy178" path="res://assets/cartas/Eletricidade3.png" id="35_rwyqg"]
+[ext_resource type="Texture2D" uid="uid://de5p6x6jj7y60" path="res://assets/cartas/Eletricidade4.png" id="36_364l7"]
+[ext_resource type="Texture2D" uid="uid://dno82htjxxl4j" path="res://assets/cartas/Eletricidade5.png" id="37_h2eh5"]
+[ext_resource type="Script" path="res://scripts/Pedra3.gd" id="38_u5vud"]
+[ext_resource type="Script" path="res://scripts/Pedra4.gd" id="40_52dll"]
+[ext_resource type="Script" path="res://scripts/Pedra5.gd" id="42_mpt80"]
+[ext_resource type="Script" path="res://scripts/Eletricidade3.gd" id="48_r3t51"]
+[ext_resource type="Script" path="res://scripts/Eletricidade4.gd" id="50_3ipsi"]
+[ext_resource type="Script" path="res://scripts/Eletricidade5.gd" id="52_y4wrx"]
 
 [node name="Cartas" type="Node2D"]
 script = ExtResource("1_vp8px")
 
 [node name="Baixo" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(0.25, 0.5)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_bt66q")
@@ -42,6 +71,21 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("9_6hnf6")
 script = ExtResource("9_ishnt")
 
+[node name="Fogo3" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_ns882")
+script = ExtResource("8_1wkii")
+
+[node name="Fogo4" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_40rki")
+script = ExtResource("10_5qwxo")
+
+[node name="Fogo5" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_od18p")
+script = ExtResource("12_hyitl")
+
 [node name="Agua1" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_22hvj")
@@ -51,6 +95,21 @@ script = ExtResource("6_c6eci")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_w8qoc")
 script = ExtResource("8_5n4mi")
+
+[node name="Agua3" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_nwel6")
+script = ExtResource("18_dnsvu")
+
+[node name="Agua4" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("15_48f3t")
+script = ExtResource("20_7cvmn")
+
+[node name="Agua5" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("16_mh8hr")
+script = ExtResource("22_gp01y")
 
 [node name="Folha1" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
@@ -62,6 +121,21 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("13_j2arl")
 script = ExtResource("13_qfcah")
 
+[node name="Folha3" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("21_c2nx7")
+script = ExtResource("28_8uciw")
+
+[node name="Folha4" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("22_m4yhl")
+script = ExtResource("30_em5pe")
+
+[node name="Folha5" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("23_i3g6o")
+script = ExtResource("32_a1k3w")
+
 [node name="Pedra1" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("15_pqd7e")
@@ -72,6 +146,21 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("17_f1rle")
 script = ExtResource("16_y8qut")
 
+[node name="Pedra3" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("28_apo1i")
+script = ExtResource("38_u5vud")
+
+[node name="Pedra4" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("29_vdd7s")
+script = ExtResource("40_52dll")
+
+[node name="Pedra5" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("30_lhxuf")
+script = ExtResource("42_mpt80")
+
 [node name="Eletricidade1" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("19_ynl2s")
@@ -81,3 +170,18 @@ script = ExtResource("17_tm6ct")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("21_x8j3r")
 script = ExtResource("18_7crdl")
+
+[node name="Eletricidade3" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("35_rwyqg")
+script = ExtResource("48_r3t51")
+
+[node name="Eletricidade4" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("36_364l7")
+script = ExtResource("50_3ipsi")
+
+[node name="Eletricidade5" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("37_h2eh5")
+script = ExtResource("52_y4wrx")

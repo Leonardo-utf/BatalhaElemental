@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3peb3gou76to"]
+[gd_scene load_steps=6 format=3 uid="uid://b3peb3gou76to"]
 
 [ext_resource type="Texture2D" uid="uid://chfxayv4scsup" path="res://assets/texturas/Madeira.jpg" id="1_mslg7"]
 [ext_resource type="Script" path="res://scripts/tabuleiro.gd" id="1_yvs5g"]
 [ext_resource type="Script" path="res://scripts/Mao.gd" id="3_eosq8"]
+[ext_resource type="Script" path="res://scripts/CartasJogador.gd" id="4_mk4qr"]
+[ext_resource type="PackedScene" uid="uid://xskxqmpcdnrw" path="res://cenas/baralho.tscn" id="5_le7rr"]
 
 [node name="Tabuleiro" type="Node2D"]
 script = ExtResource("1_yvs5g")
@@ -15,3 +17,13 @@ texture = ExtResource("1_mslg7")
 [node name="Mao" type="Node2D" parent="."]
 position = Vector2(-34.9998, 26.0002)
 script = ExtResource("3_eosq8")
+
+[node name="CartasJogador" type="HBoxContainer" parent="."]
+offset_left = 120.0
+offset_top = 407.0
+offset_right = 1006.0
+offset_bottom = 629.0
+script = ExtResource("4_mk4qr")
+
+[node name="Baralho" parent="." instance=ExtResource("5_le7rr")]
+visible = false

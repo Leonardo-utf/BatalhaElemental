@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2og61ukgxvs5"]
+
+[ext_resource type="Script" path="res://scripts/menu_principal.gd" id="1_7l1cj"]
+[ext_resource type="Texture2D" uid="uid://chfxayv4scsup" path="res://assets/texturas/Madeira.jpg" id="1_7rlq8"]
+[ext_resource type="FontFile" uid="uid://3rw4f3epy7xx" path="res://assets/fontes/Helv Children.otf" id="2_0ff1d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sr5ii"]
+font = ExtResource("2_0ff1d")
+font_size = 94
+font_color = Color(0.670588, 1, 0.996078, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7l1cj")
+
+[node name="madeira" type="Sprite2D" parent="."]
+position = Vector2(614, 337)
+scale = Vector2(0.2629, 0.225472)
+texture = ExtResource("1_7rlq8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.654321
+anchor_right = 0.177083
+anchor_bottom = 0.942901
+offset_left = 47.0
+offset_top = -152.0
+offset_right = 184.0
+offset_bottom = -120.0
+grow_vertical = 0
+pivot_offset = Vector2(-2, -1)
+metadata/_edit_use_anchors_ = true
+
+[node name="bt_jogar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ff1d")
+theme_override_font_sizes/font_size = 55
+text = "JOGAR"
+flat = true
+alignment = 0
+
+[node name="bt_baralho" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_0ff1d")
+theme_override_font_sizes/font_size = 55
+text = "BARALHO"
+flat = true
+alignment = 0
+
+[node name="bt_sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_0ff1d")
+theme_override_font_sizes/font_size = 55
+text = "SAIR"
+flat = true
+alignment = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 355.0
+text = "BATALHA ELEMENTAL"
+label_settings = SubResource("LabelSettings_sr5ii")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/bt_jogar" to="." method="_on_bt_jogar_pressed"]
+[connection signal="pressed" from="VBoxContainer/bt_baralho" to="." method="_on_bt_baralho_pressed"]
+[connection signal="pressed" from="VBoxContainer/bt_sair" to="." method="_on_bt_sair_pressed"]
